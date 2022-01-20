@@ -14,7 +14,7 @@
 		"express": "^4.16.4",
 		"mongodb": "^4.3.0"
 	},
-	"engines" {
+	"engines": {
 		"node": "14.13.0"
 	},
 	"repository": {
