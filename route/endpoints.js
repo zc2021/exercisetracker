@@ -4,7 +4,7 @@ const dbHandler = require('../mongodb/handler');
 
 const recordRoutes = express.Router()
 
-recordRoutes.route('/api/users').get(function(req, res, next) {
+recordRoutes.route('/api/users').get(function(_req, res, next) {
   dbHandler.serverConnection(async function(e) {
     if (e) {
       next(e);

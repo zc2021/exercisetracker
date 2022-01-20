@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(appRouter);
 
-app.get('/', (req, res, next) => {
+app.get('/', (_req, res, next) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
