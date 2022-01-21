@@ -71,7 +71,7 @@ recordRoutes.route('/api/users/:id/exercises').post(function(req, res, next) {
   const date = dateValParser(req.body['date']);
   const description = req.body['description']
 
-  let exercise = {
+  const exercise = {
     'description': description,
     'duration': duration,
     'date': date,
@@ -117,6 +117,7 @@ function dateValParser(param, undefinedOk) {
   } else {
     dateObj = new Date(dateVal);
   }
+  dateObj.setHours(0,0,0)
   return dateObj;
 }
 
