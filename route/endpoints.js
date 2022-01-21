@@ -111,9 +111,10 @@ function dateValParser(param, undefinedOk) {
   undefinedOk = isUndefined(undefinedOk) ? false : undefinedOk;
   
   if (isUndefined(dateVal) || isEmpty(dateVal)) {
-    if (!undefinedOk) {
-      dateObj = new Date();
+    if (undefinedOk) {
+      return dateObj;
     }
+    dateObj = new Date();
   } else {
     dateObj = new Date(dateVal);
   }
