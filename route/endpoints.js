@@ -1,8 +1,13 @@
+const path = require('path');
 const express = require('express');
 
 const dbHandler = require('../mongodb/handler');
 
-const recordRoutes = express.Router()
+const recordRoutes = express.Router();
+
+recordRoutes.route('/').get(function (_req, res) {
+  res.sendFile(path.dirname(__dirname) + '/views/index.html');
+});
 
 recordRoutes.route('/api/users').get(function(_req, res, next) {
   dbHandler.serverConnection(async function(e) {

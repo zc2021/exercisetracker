@@ -15,7 +15,7 @@
     "mongodb": "^4.3.0"
   },
   "engines": {
-    "node": "14.13.0"
+    "node": "^16.13.0"
   },
   "repository": {
     "url": "git+https://github.com/zc2021/exercisetracker"
